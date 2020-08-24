@@ -1,0 +1,4 @@
+* html body {
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+  background: red !important; }

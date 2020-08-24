@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive; }
+  
+  .mw {
+    max-width: 1200px;
+    margin: auto; }
+  
+  html {
+    width: 100vw;
+    color:     rgb(20, 20, 20);;
+    background: #000000; }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+  
+  main {
+    margin: 0;
+    position: relative;
+    background: rgb(255, 255, 255);
+    z-index: 0; }
+  
+  .content {
+      position: relative;
+    padding: 9rem 3rem;
+    background: rgb(255, 255, 255);
+    transform-origin: bottom;
+    // z-index: 000;
+    position: relative;
+    transition-property: all;
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+    transition-delay: 100ms;
+    opacity: 1;
+}
+  
+  .content.is-active {
+    transform: scale(0.96);
+    // transform: translateY(0rem);
+    opacity: 0.8;
+    transition-delay: 000ms; 
+}
+  
+  img {
+    margin: 0rem 0rem 4rem 0;
+    width: 50%;
+    height: auto;
+    display: inline-block;
+}
+  
+  p {
+    font-family: arial;
+    max-width: 30em; }
+  
+  h1 {
+    width: max-content !important;
+}
+  
+  a, a:visited {
+    text-decoration: none;
+    color: unset;
+    font-size: 1.5rem;
+    position: relative;
+    line-height: 1;
+    border: 1px solid rgba(255, 255, 255, 0); }
+
+  
+  a:hover {
+    color: #ff0a3f;
+    border: 1px solid #ff0a3f;
+}
+  
+  a:hover::after {
+    transform: translateX(0%); }
+  
+  .nav--button {
+    padding: 0.25rem 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer; }
+  
+  .nav--bar {
+      left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 2001;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    /* border: 1px solid black; */
+    background: rgb(20, 20, 20);
+    transition-duration:  250ms; 
+    transition-delay: 100ms; 
+    color: rgb(255, 255, 255); 
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0);
+
+
+    &.is-exiting {
+        opacity: 0;
+        transition: 350ms;
+    }
+}
+  
+  .nav--bar.is-active {
+    color: rgb(255, 255, 255) !important;
+    background: rgba(20, 20, 20, 0) !important;
+    /* background-color: rgb(195, 245, 14); */
+    /* transition-duration: 450ms; */
+    box-shadow: 1px 1px 3px rgba(58, 57, 57, 0);
+    /* transition-delay: 450ms; */ }
+  
+  a.nav--logo, a.nav--logo:visited, a.nav--logo {
+    padding: 0.25rem 0.5rem;
+    margin: 0.5rem;
+    /* color: rgba(22, 22, 22, 0.986); */ }
+  
+  a.nav--logo.is-active {
+    /* color: rgb(255, 255, 255); */ }
+  
+  .nav--wrapper {
+    position: relative;
+    top: 0;
+    z-index: 1000; }
+  
+  .nav--links.is-initial {
+    pointer-events: none;
+    /* opacity: 0.2; */
+    // opacity: 1;
+    transform: translateY(-100%);
+    transition-property: transform;
+    transition-duration: 350ms;
+    will-change: transform;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) }
+  
+  .nav--links.is-initial.is-active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0%);
+    position: fixed;
+    /* z-index: 1000; */ }
+  
+  .nav--links {
+    background: rgb(231, 231, 231);
+    background: rgb(20, 20, 20);
+    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgb(0, 0, 0));
+    /* background-blend-mode: overlay; */
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    opacity: 1;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2000 !important;
+    overflow: hidden;
+    will-change: transform;
+    // transform-style: preserve-3d;
+    transform-origin: right;
+    /* backdrop-filter: blur(20px); */
+    /* backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%); */
+
+  
+}
+  
+  .nav--links.is-initial.is-active .nav--list {
+    transform: translateY(0vh) scale(1) translateX(0);
+    opacity: 1; }
+  
+  .nav--links .nav--list {
+    position: absolute;
+    padding: 3rem;
+    opacity: 0;
+    text-align: right !important;
+    transform: translateY(94vh) scale(0.96) translateY(0rem);
+    transition-duration: 350ms;
+    transform-origin: bottom;
+    will-change: transform;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86) }
+  
+  .nav--list a {
+    display: block;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 6vw;
+    border: none;
+}
+
+#nav--list {
+    &.is-exiting {
+        opacity: 0;
+        transition: 350ms;
+      
+    }
+}
+  
+  .nav--list a:hover {
+    color: #ff0a3f;
+}
+  
