@@ -14,6 +14,8 @@
     body {
         padding: 0;
         margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: black;
     }
   
   main {
@@ -30,14 +32,15 @@
     // z-index: 000;
     position: relative;
     transition-property: all;
-    transition-duration: 450ms;
+    transition-duration: 350ms;
     transition-timing-function: ease;
     transition-delay: 100ms;
     opacity: 1;
 }
   
   .content.is-active {
-    transform: scale(0.96);
+    transform: scale(0.98);
+    transition-duration: 550ms;
     // transform: translateY(0rem);
     opacity: 0.8;
     transition-delay: 000ms; 
@@ -81,7 +84,7 @@
     cursor: pointer; }
   
   .nav--bar {
-      left: 0;
+    left: 0;
     position: fixed;
     top: 0;
     z-index: 2001;
@@ -143,7 +146,7 @@
   
   .nav--links {
     background: rgb(231, 231, 231);
-    background: rgb(20, 20, 20);
+    background: rgba(20, 20, 20, 0.99);
     // background-image: linear-gradient(to right, rgba(0, 0, 0, 0.959), rgb(0, 0, 0));
     /* background-blend-mode: overlay; */
     position: fixed;
@@ -202,3 +205,4 @@
     color: #ff0a3f;
 }
   
+@import '_nav_base';

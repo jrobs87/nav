@@ -1,0 +1,56 @@
+.nav {
+    border: 1px solid rgb(252, 5, 5);
+
+    .nav-bar {
+        border: 1px solid;
+
+        .nav-bar_logo {
+            border: 1px solid green;
+        }
+
+        .nav-bar_body {
+            border: 1px solid blue;
+       }
+
+       .nav-bar_button{
+           border: 1px solid black;
+       }
+
+    }
+
+    .nav-modal {
+        border: 1px solid rgb(0, 255, 170);
+    }
+
+    &.is-active {
+        .nav-bar {
+            border: 1px solid;
+    
+            .nav-bar_logo {
+                border: 1px solid green;
+                background: green;
+                color: white;
+            }
+    
+            .nav-bar_body {
+                border: 1px solid blue;
+                background: blue;
+                color: white;
+           }
+    
+           .nav-bar_button{
+               border: 1px solid black;
+               background: black;
+                color: white;
+           }
+
+       
+    
+        }
+    
+        .nav-modal {
+            border: 1px solid rgb(0, 255, 170);
+            background: rgb(0, 255, 170);
+        }
+    }
+}

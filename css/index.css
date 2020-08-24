@@ -13,7 +13,9 @@ html {
 
 body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black; }
 
 main {
   margin: 0;
@@ -28,13 +30,14 @@ main {
   transform-origin: bottom;
   position: relative;
   transition-property: all;
-  transition-duration: 450ms;
+  transition-duration: 350ms;
   transition-timing-function: ease;
   transition-delay: 100ms;
   opacity: 1; }
 
 .content.is-active {
-  transform: scale(0.96);
+  transform: scale(0.98);
+  transition-duration: 550ms;
   opacity: 0.8;
   transition-delay: 000ms; }
 
@@ -129,7 +132,7 @@ a.nav--logo.is-active {
 
 .nav--links {
   background: #e7e7e7;
-  background: #141414;
+  background: rgba(20, 20, 20, 0.99);
   /* background-blend-mode: overlay; */
   position: fixed;
   height: 100vh;
@@ -176,3 +179,33 @@ a.nav--logo.is-active {
 
 .nav--list a:hover {
   color: #ff0a3f; }
+
+.nav {
+  border: 1px solid #fc0505; }
+  .nav .nav-bar {
+    border: 1px solid; }
+    .nav .nav-bar .nav-bar_logo {
+      border: 1px solid green; }
+    .nav .nav-bar .nav-bar_body {
+      border: 1px solid blue; }
+    .nav .nav-bar .nav-bar_button {
+      border: 1px solid black; }
+  .nav .nav-modal {
+    border: 1px solid #00ffaa; }
+  .nav.is-active .nav-bar {
+    border: 1px solid; }
+    .nav.is-active .nav-bar .nav-bar_logo {
+      border: 1px solid green;
+      background: green;
+      color: white; }
+    .nav.is-active .nav-bar .nav-bar_body {
+      border: 1px solid blue;
+      background: blue;
+      color: white; }
+    .nav.is-active .nav-bar .nav-bar_button {
+      border: 1px solid black;
+      background: black;
+      color: white; }
+  .nav.is-active .nav-modal {
+    border: 1px solid #00ffaa;
+    background: #00ffaa; }
